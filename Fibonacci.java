@@ -2,25 +2,25 @@ import java.util.Scanner;
 
 public class Fibonacci {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scnr = new Scanner(System.in);
     
-        int n = scanner.nextInt();
+        int num = scnr.nextInt();
         
-        int result = fibonacciR(n);
-        System.out.println("Fibonacci(" + n + ") is " + result + ".");
+        int result = fibonacciR(num);
+        System.out.println("Fibonacci(" + num + ") is " + result + ".");
         
-        scanner.close();
+        scnr.close();
     }
 
-    public static int fibonacciR(int n) {
+    public static int fibonacciR(int num) {
         
-        if (n == 0) {
+        if (num == 0) {
             return 0;
         }
-        if (n == 1) {
+        if (num == 1) {
             return 1;
         }
   
-        return fibonacciR(n - 1) + fibonacciR(n - 2);
+        return fibonacciR(num - 1) + fibonacciR(num - 2);
     }
 }
